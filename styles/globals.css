@@ -1,0 +1,4 @@
+/* eslint-disable-next-line unknownAtRules */
+@import "tailwindcss/preflight";
+/* eslint-disable-next-line unknownAtRules */
+@tailwind utilities;
