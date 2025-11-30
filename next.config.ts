@@ -8,6 +8,15 @@ const nextConfig: NextConfig = {
     // Make TypeScript errors fatal in production
     ignoreBuildErrors: false,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
+    qualities: [75, 90, 100],
+  },
 };
 
 export default nextConfig;

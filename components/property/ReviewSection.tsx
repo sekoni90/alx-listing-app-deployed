@@ -1,4 +1,5 @@
 import axios from "axios";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import type { Review, ReviewResponse } from "@/interfaces/review";
 
@@ -83,11 +84,14 @@ const ReviewSection: React.FC<ReviewSectionProps> = ({ propertyId }) => {
               <div className="flex items-start">
                 <div className="flex-shrink-0">
                   {review.userAvatar ? (
-                    <img
-                      src={review.userAvatar}
-                      alt={review.userName}
-                      className="h-10 w-10 rounded-full"
-                    />
+                    <div className="relative h-10 w-10 rounded-full overflow-hidden">
+                      <Image
+                        src={review.userAvatar}
+                        alt={review.userName}
+                        fill
+                        style={{ objectFit: 'cover' }}
+                      />
+                    </div>
                   ) : (
                     <div className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center">
                       <span className="text-gray-500 text-lg">
