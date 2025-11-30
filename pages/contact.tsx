@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -165,12 +166,12 @@ export default function ContactPage() {
               <p className="text-emerald-100 mb-6">
                 Check out our Help Center for instant answers to common questions.
               </p>
-              <a
+              <Link
                 href="/help"
                 className="inline-block px-6 py-3 bg-white text-emerald-600 font-bold rounded-xl hover:bg-emerald-50 transition-colors"
               >
                 Visit Help Center
-              </a>
+              </Link>
             </div>
           </div>
         </div>
